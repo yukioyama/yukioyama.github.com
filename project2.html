@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+                        <br>
+                        <br>
+                    <br>
+
+
+            </div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+							<header>
+                                <h3><a href="index.html">Back to Home</a></h3>
+                                <br>
+								<h2>Camera Zoom Piece</h2>
+							</header>
+							<a class="image featured"><img src="images/project1.jpg" alt="" /></a>
+							<p>
+								Above is an image of the zoom piece design from SOLIDWORKS.  The boxed SONY R10C camera encasing was designed by Christine Yuan, one of my teammates on CUAir's mechanical subteam.  I developed the system consisting of the servo, gears, and mounting pieces.
+							</p>
+							<section>
+								<header>
+									<h3>Design Objective and Constraints</h3>
+								</header>
+								<p>
+									The goal was to create a system to zoom the camera lens to any desired focal length.  A big constraint was creating a very compact and light design for several reasons.  First, I didn't want to mess with the CG of the plane or gimbal.  Second, it was important that the piece didn't interfere with the movement/rotation of the gimbal used to stabilize the camera.
+                                  <br> 
+                                    <br>
+                                    The software team also wanted the system to be closed loop.  Moreover, the system should be able to provide feedback to the controller about the current zoom position.
+                                    <br>
+                                    <br>
+                                    Lastly the electrical team preferred that I used servo motors as opposed to motors.  Servos are useful for a few reasons.  From an electrical standpoint, it isn't necessary to include a ESC (electronic speed controller) or H-Bridge as is required by BLDC's and Brushed DC motors respectively.  From a software standpoint, it is easy to tell a servo to turn to a specific angle because of the built in encoder or potentiometer within all servos.
+								</p>
+                                <header>
+									<h3>Design Rationale</h3>
+								</header>
+								<p>
+									After discussing with a few of my peers, I was convinced that the simplest design would fundamentally consist of two gears— one connected to a servo and another wrapped around the lens.
+                                    <br>
+                                    <br>
+                                    The first question I had was how I would attach the gear around the lens.  Researching commercial zoom pieces online used by filmmakers, I found that many manufacturers made the lens gears out of rubber.  The gears were then stretched and attached by pressure/tension.  Other manufacturers made wrap-around gears where the gear could be "unravelled" into a line of rubber which could then be wrapped around the lens.
+                                    <br>
+                                    <br>
+                                    Ultimately, I opted for a design where the gear would act like a clamp that could be tightened with a screw.  The reason was that it was easy to rapidly prototype this design using a 3D printer (I couldn't 3D print rubber).
+                                </p> 
+                                    <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project1a.jpg" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 Ultimately, I opted for a design where the gear would act like a clamp that could be tightened with a screw (as seen in the bottom of the picture to the left).  The reason was that it was easy to rapidly prototype this design using a 3D printer (I couldn't 3D print rubber).
+                                <br>
+                                <br>
+                                    Next, I needed to figure out how to provide positional feedback.  While the servos did technically provide angular feedback, I wanted a more foolproof and exact means of feedback.  I was worried that the servos could potentially turn too far and damage the camera lens as a result.  Therefore, I decided to design a physical limit the camera could turn to.
+							</article>
+                            
+						</div>
+                                <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project1b.jpg" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								Initially, I designed two limit switches mounted on the top of the camera encasing box.  Then there would be two sticks mounted on the gear lens that would hit the limit switches if the servo zoomed too far clockwise or counterclockwise.  While this design worked, it wasn't the most elegant, because the sticks would hit the limit switches at an angle.
+                                <br>
+                                <br>
+                                    After a few more design iterations, I came up with the design on the left.  The black piece shown is the stopper piece which prevents the lens gear (the larger one) from over-zooming.  While not shown in the CAD, small push buttons can be inserted into the black stopper piece (the legs of the button fit into the four holes shown).
+							</article>
+                            
+						</div>
+                                <p>The push buttons serve as feedback for the servo controller.  They send a digital signal indicating whether the camera has zoomed too far, in which case the controller knows to immediately terminate the servo actuation.  Notice there is a gap between the two (left and right) stoppers.  This gap is to allow the wires to be routed upwards towards the controller board.</p>
+                                    
+							</section>
+							<section>
+								<header>
+									<h3>Thank You's</h3>
+								</header>
+								<p>
+									Had a lot of help from Theresa Bracht (team lead) and Chrsitine Yuan (gimbal expert) who were in general a great mentors along the way in my first year on CUAir as a college freshman.  Many thanks also to Evan Patrick and Maria Sam on platform software subteam and Joseph Primmer and Adam Weld on the electrical subteam.  Extremely cooperative and helpful when I had to make design decisions which affected their work.
+								</p>
+							</section>
+						</article>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						
+					
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact & Media</h3>
+										</header>
+										<p>Email: yo76@cornell.edu</p>
+                                        <br>
+										<ul class="icons">
+											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

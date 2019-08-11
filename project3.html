@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>XByWire Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+                        <br>
+                    <br>
+                       <a href="index.html" class="headerbutton">Back to Home</a>
+                    <br>
+                    <br>
+
+
+            </div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+                            
+							<header>
+								<h2>XByWire Prototype</h2>
+                                <br>
+							</header>
+							<a class="image featured"><img src="images/project3.jpg" alt="" /></a>
+							<p>
+								An image of the XByWire prototype designed and assembled by Guillaume Sauze.
+							</p>
+							<section>
+                                <header>
+									<h3>What I Actually Did</h3>
+								</header>
+								<p>
+								    I didn't design any mechanical component of the robot above.  I almost feel bad putting the picture there.  When Professor Jorge Angeles at McGill's Centre for Intelligent Machines accepted my intern application which I had emailed to him in early June, I was super surprised.  It turned out he needed someone to complete a very specific task by the end of the summer.  And that task was 'rebooting' a prototype robot that was built in 2014 by a Master's student Guillaume Sauze.
+                                    <br>
+                                    <br>
+                                    At first, I was a little disheartened because when I saw I had been accepted as an intern I imagined I would be CAD-ing my own creative designs for sci-fi like intelligent robots.  Instead, I had just figured out that my job didn't involve mechanical design at all.  Little did I know, this was one of the coolest experiences I'd ever have.  It was my first time "reverse engineering" an existing technology and trying to figure out what each and every wire on the robot was used for.  While there was a thesis paper, there was no documentation on the electrical schematics, and the code was barely commented.
+								</p>
+                                <header>
+									<h3>What I learned</h3>
+								</header>
+                                <h4 style="font-style: italic">X-by-Wire</h4>
+								<p>
+									The entire concept of X-By-Wire was foreign to me.  X-by-Wire means replacing mechanical systems with electrical systems (hence, "X" represents some variable mechanical component which is then replaced "by Wire").  A real world example of this is replacing the mechanical transmission of a car with signal transmission via wire from the steering wheel to the wheels.  In the modern day, most commercial cars still rely on mechanical transmissions instead of wire.  However, there are various advantages of replacing these mechanical systems with electrical ones.  First, mechanical transmissions move in fixed proportion with the steering angle.  However, with an electrical system, it is possible to adjust the proportionality constant by the mere change of a signal, whereas a complete disassembly and reassembly would be necessary for a mechanical system.  This is useful because changing the proportionality constant could prevent dangerous movements by the driver, thus decreasing accidents.  A big reason of why companies haven't transitioned to this technology is because of the fear of electrical systems failing.
+                                    <br>
+                                    <br>
+                                    Guillaime Sauze's goal was to "build a proof-of-concept complete X-by-wire prototype."  Since past research on the benefits of X-b-wire automobiles have been simulation-based, he wanted to create a physical prototype and prove results in the field.  He chose to model his prototype off the Toyota Tacoma, so that the track and wheel proportions were the same as this car (just with scaled down values of course).
+                                  
+                                    </p>
+                                <h4 style="font-style: italic"><br>Serial Communication</h4>
+                            <p>
+                                    While studying the Arduino used to control the prototype, I inevitably stumbled upon the mysterious MOSI, MISO, TX, and RX pins.  Nowadays, you grow up being told computers communicate using binary 0's and 1's but you're never really told exactly how that works.  During this project, I finally understood what this binary stuff meant-hahaa.  I learned the basics of serial communication and the various serial buses I2C, SPI, and UART on the Arduino.  Everything started to fall in place for me; it made sense how a series of high/low pulses was the simplest way to send data and why all these buses needed clocks.  As a mechanical engineering major, I used to cringe at the thought of anything electrical (something I couldn't visualize before).  Now, I've definitely discovered an appreciation and curiosity for electrical engineering.
+                                </p> 
+                                <h4 style="font-style: italic"><br>Motors</h4>
+                                <p>
+                                    One of the first things I noticed on the robot were these two large blocks labeled "ESCON Motor Controller."  Examining the wiring, I noticed that these served as some sort of conduit between the motors and microcontroller.  What I had stumbled upon was an ESC, or electronic speed conroller.  I knew what an ESC was, having worked with it in my RC-car localization project.  But since the RC-car was pre-built and I never needed to learn exactly how this ESC worked to work with ROS, I never did.  This time around, I did my research.
+                                    <br>
+                                    <br>
+                                    Personally, I find motors super cool.  Especially Brushless DC (BLDC) Motors (which were used in the prototype).  They are a direct application of Faraday's Law, which I learned about in the Fall Semester of my freshman year in PHYS 2213.  If you don't know, a BLDC is made up of a stator of coils and rotor of magnets.  By switching the direction of current in the coils, the stator repels/attracts magnets on the rotor in a sequence such that the rotor rotates.  Typically, there are three groups of coils.  At any given time, one group is "north", one is "south", and one has no current.  That's why there are three wires coming out of a BLDC; each wire controls a different group.  The ESC is used to send the sequence of commands to each of these 3 wires necessary to rotate the motor.
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                        <article class="col-4 col-12-mobile special">
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project3a.gif" alt="" /></a>
+							</article>
+                                        <article class="col-4 col-12-mobile special"> <br><br><br><br><br><br> Gif from www.renesas.com
+							</article>
+                            
+						</div>
+                                <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project3b.gif" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+                                             <h4 style="font-style: italic"><br>RC Filter</h4>
+								Arduino is capable of reading analog signals, but not outputting them.  Arduino is capable of outputting a PWM signal, but since PWM is fundamentally just switching rapidly between high and low the motor controller is likely to read an incorrect voltage.  When I saw a capacitor connecting the ground pin and VIN Pin (which was connected to an Arduino PWM pin) on the ESCON motor controller, I did my research and found something called a low-pass filter.  I realized this low-pass filter was used to smooth out the signal from the PWM pin.
+							</article>
+                            
+						</div>
+                                <p>A low-pass filter, as its name suggests, lets low frequency parts of a signal pass through.  At first, this confused me.  How was any part of the PWM signal going to pass through the filter?  A PWM signal is just a high frequency square wave.  Intuitively, I expected nothing would pass through.  What a low pass filter actually does is pass through the average value of the signal.  To understand this concept, it was helpful to think about the concept of beats (which I learned in PHYS 2214: waves).  Beats are a result of interference between a high and low frequency wave.  What a low pass filter does is effectively remove the high frequency wave which causes ups and downs in the low frequency wave, leaving just the smoothed out low frequency wave.  Likewise, the filter removes the rapid ups & downs of the PWM square wave and outputs the average value of the square wave, which is the desired analog output.</p>
+                                <div class="row">
+                                        <article class="col-4 col-12-mobile special">
+							</article>
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/beats.png" alt="" /></a>
+							</article>
+                                        <article class="col-4 col-12-mobile special"> <br><br><br><br><br><br> Image from stackoverflow.com
+							</article>
+                            
+						</div>
+                                <header>
+									<h3>Schematics, Outlines, and Flowcharts</h3>
+                                    I spent a lot of time understanding the highlighted topics above and other electrical engineering related concepts, but below is some of the work I did specifically for my job.
+                                    
+								</header>
+                                 <div class="row">
+                                        <article class="col-6 col-12-mobile special">
+                                            <a class="image featured"><img src="images/project3d.jpg" alt="" /></a>
+							</article>
+							<article class="col-6 col-12-mobile special">
+								This is an outline of the data flow from Labview which sends commands to the Arduino which then actuates the motors/servos.  The communication protocol is defined in a class in Arduino called EV.cpp, and this class is then used in the main ino arduino file called xbywire.ino (as explained in the top of the diagram).  The communication protocol works like this: a message ID is sent which specifies the type of data, and then data is sent immediately following this ID.  The ID determines tells Arduino how long the data will be, and what parameters are sent in order.  E.g., for message ID 00, the first four bytes are left offset, the second four bytes are right offset, the third four bytes are max steering angle, the fourth four bytes are min steering angle, and the fifth four bytes are the safety timeout.  Data often has to be divided into multiple bytes in this manner because Arduino Atmega 2560 is an 8-bit microcontroller.  I created this diagram by reading the EV.cpp file line by line and documenting/commenting as I read through the code.
+                                     </article>
+                            
+						</div>
+                                  
+                 
+                                <div class="row">
+                                        <article class="col-4 col-12-mobile special">
+                                            <a class="image featured"><img src="images/project3e.jpg" alt="" /></a>
+							</article>
+							<article class="col-8 col-12-mobile special">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+								This is an code flowchart I created for xbywire.ino, the main file which is uploaded to Arduino.  The code is fairly simple, and is essentially a loop which runs a communication method in the EV class until a signal hasn't been established with Labview user app for over 500ms.
+                                     </article>
+                            
+						</div>
+							</section>
+							
+						</article>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						
+					
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact & Media</h3>
+										</header>
+										<p>Email: yo76@cornell.edu</p>
+                                        <br>
+										<ul class="icons">
+											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
