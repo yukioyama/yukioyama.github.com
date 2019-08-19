@@ -36,19 +36,29 @@
 								<h2>XByWire Prototype</h2>
                                 <br>
 							</header>
-							<a class="image featured"><img src="images/project3.jpg" alt="" /></a>
+							<a class="image featured"><img src="images/project3.PNG" alt="" /></a>
 							<p>
-								An image of the XByWire prototype designed and assembled by Guillaume Sauze.
+								An CAD model of the XByWire prototype designed and assembled by Guillaume Sauze.
 							</p>
 							<section>
                                 <header>
 									<h3>What I Actually Did</h3>
 								</header>
-								<p>
-								    I didn't design any mechanical component of the robot above.  I almost feel bad putting the picture there.  When Professor Jorge Angeles at McGill's Centre for Intelligent Machines accepted my intern application which I had emailed to him in early June, I was super surprised.  It turned out he needed someone to complete a very specific task by the end of the summer.  And that task was 'rebooting' a prototype robot that was built in 2014 by a Master's student Guillaume Sauze.
-                                    <br>
-                                    <br>
-                                    At first, I was a little disheartened because when I saw I had been accepted as an intern I imagined I would be CAD-ing my own creative designs for sci-fi like intelligent robots.  Instead, I had just figured out that my job didn't involve mechanical design at all.  Little did I know, this was one of the coolest experiences I'd ever have.  It was my first time "reverse engineering" an existing technology and trying to figure out what each and every wire on the robot was used for.  While there was a thesis paper, there was no documentation on the electrical schematics, and the code was barely commented.
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project3.jpg" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 Above is a CAD I made of an existing robot.  To the left is the robot I was tasked with making the CAD file for.  I almost feel bad putting the picture there since I didn't actually design the robot itself.  When Professor Jorge Angeles at McGill's Centre for Intelligent Machines accepted my intern application which I had emailed to him in early June, I was super surprised.  It turned out he needed someone to complete a very specific task by the end of the summer.  And that task was 'rebooting' a prototype robot that was built in 2014 by a Master's student Guillaume Sauze.
+                                    
+							</article>
+                            
+						</div>
+								
+								   
+                                
+                                <p>
+                                    At first, I was a little disheartened because when I saw I had been accepted as an intern I imagined I would be CAD-ing my own creative designs for sci-fi like intelligent robots.  Instead, I had just figured out that my job didn't involve mechanical design at all.  Little did I know, this was one of the coolest experiences I'd ever have.  It was my first time "reverse engineering" an existing technology and trying to figure out what each and every wire on the robot was used for.  While there was a thesis paper, there was no documentation on the electrical schematics, and the code was barely commented.  Guillaume Sauze also did not provide the CAD files he used to machine parts for the robot, and so I recreated the robot by deconstructing and measuring parts manually with a ruler and caliper.
 								</p>
                                 <header>
 									<h3>What I learned</h3>
@@ -130,6 +140,19 @@
                                 <br>
                                 <br>
 								This is an code flowchart I created for xbywire.ino, the main file which is uploaded to Arduino.  The code is fairly simple, and is essentially a loop which runs a communication method in the EV class until a signal hasn't been established with Labview user app for over 500ms.
+                                     </article>
+                            
+						</div>
+                                <div class="row">
+                                        <article class="col-4 col-12-mobile special">
+                                            <a class="image featured"><img src="images/project3g.jpg" alt="" /></a>
+							</article>
+							<article class="col-8 col-12-mobile special">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+								This is a schematic for the I/O pins on the on-board Arduino.  This project made full use of the Arduino.  Servo communication via the SPI lines, IMU through I2C, and XBee through UART Rx and Tx pins.  Many standard digital and PWM I/O pins were used to communicate with the ESCON motor controllers.  The numbered blocks above and below the Arduino on the schematic represent the different lines on terminal blocks which were used for wire organization.
                                      </article>
                             
 						</div>
