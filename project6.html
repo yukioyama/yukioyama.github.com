@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Smart Gimbal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+                        <br>
+                    <br>
+                       <a href="index.html" class="headerbutton">Back to Home</a>
+                    <br>
+                    <br>
+
+
+            </div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+                            
+							<header>
+								<h2>Smart Gimbal</h2>
+                                <h3>*IN PROGRESS*</h3>
+                                <br>
+							</header>
+							<a class="image featured"><img src="images/project6c.png" alt="" /></a>
+							<p>
+								A render of the smart gimbal without the camera mount attached on the third axis
+							</p>
+							<section>
+                                <header>
+									<h3>Project Objectives</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project6d.jpg" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 The goal of this project is to make an innovative prototype for a product that could potentially make life much easier for videographers. Standard commercial gimbals are capable of camera stabilization in axes of a user's choice and can also perform simple tasks such as panning. My partner and I hoped to create a gimbal equipt with all these capabilities along with object detection and tracking.
+                                    For example, our gimbal would automate the task of tracking a cat walking along a sidewalk. Instead of a user having to constantly try to keep the cat in the middle of the screen, they would be able to walk relatively casually alongside the cat (or not at all) as the gimbal would autonomously center the cat in the middle of the shot.
+                                    
+							</article>
+                            
+						</div>
+								
+								   
+                                <header>
+									<h3>Parts</h3>
+								</header>
+                                <h4 style="font-style: italic">Storm32 BGC</h4>
+								<div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project6e.jpg" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 At first, we considered trying to program the stabilization algorithm from scratch, but we soon abandoned this idea. It would be much easier to use an existing gimbal controller that would handle all of the stabilization automatically. All we would have to do was send signals to the gimbal controller to adjust the default position of the motors in order to track desired objects. The Storm 32 BGC controller was cheap and had loads of documentation online for us to eat up. Sending signals to the Storm 32 BGC can be easily done via servo pulse signals to the RC pins on the board.
+                                    
+							</article>
+                            
+						</div>
+                                <h4 style="font-style: italic"><br>Raspberry Pi Zero</h4>
+                            <p>
+                                    We decided to use the Raspberry Pi Zero for the controls since it was compact and could also run Python/C++ and OpenCV. With all of the GPIO pins on the Zero, it would be difficult to run out of inputs and outputs. The Zero is also very compact, which was a constraint for creating a sleek physical design for our prototype.
+                                </p> 
+                                <h4 style="font-style: italic"><br>Motors</h4>
+                                    <p>
+                                    The Storm32 BGC acts not only as a stabilizer but also as a motor controller (i.e. it replaces a motor controller and does extra). The Storm32 was designed for brushless DC motors, so we had to find BLDC motors that matched the electrical specifications.
+                                </p>
+                                <h4 style="font-style: italic"><br>LCD and Analog Thumb Joystick</h4>
+                                    <p>
+                                    We needed some way for the user to be able to choose an object they would want the gimbal to focus on. In order to accomplish this, we decided we wanted an LCD display that would give the user a list of objects to focus on, and a joystick that could be used to then select from the list.
+                                </p>
+                                <h4 style="font-style: italic"><br>LCD and Analog Thumb Joystick</h4>
+                                    <p>
+                                    We needed some way for the user to be able to choose an object they would want the gimbal to focus on. In order to accomplish this, we decided we wanted an LCD display that would give the user a list of objects to focus on, and a joystick that could be used to then select from the list.
+                                </p>
+                                <h4 style="font-style: italic"><br>Power</h4>
+                                    <p>
+                                    We decided to use two batteries in series which would provide 12V. 7V to power the Storm BGC and 5V for the Pi.  We plan to use the GPIO pins on the Pi to provide power to the LCD and thumb joystick.
+                                </p>
+                                
+                                <header>
+									<h3>Mechanical Design</h3>
+								</header>
+                                
+                                    <div class="row">
+                                        <article class="col-4 col-12-mobile special">
+                                            <a class="image featured"><img src="images/project6b.png" alt="" /></a>
+							</article>
+							<article class="col-8 col-12-mobile special">
+                                I worked on the mechanical design of the prototype. The main constraints I kept in mind as I sketched and then CAD'd my design were manufacturability, compactness, and structural integrity. I also tried to make my design aesthetically appealing for a prototype. I decided to house the LCD, Storm32 BGC, and Raspberry Pi all in a compartment sticking out of the side of a handle. This specific prototype was created for a right hand user, which is why I placed the thumb joystick to the right of the LCD display, allowing a right-handed user to easily use the device with one hand. I decided to house the batteries within the handle. The handle is completely hollow to allow for powerlines and 3 axis motor wires to travel into the LCD compartment.
+                                <br>
+                                All the components are either to be 3D printed or lasercutted. I made sure to design all the 3D printed parts such that there were no large overhangs at over 45 degrees to the printing surface.
+							</article>
+                            
+						</div>
+                                
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						
+					
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact & Media</h3>
+										</header>
+										<p>Email: yo76@cornell.edu</p>
+                                        <br>
+										<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/yuki-oyama-01a748177/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
