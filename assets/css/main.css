@@ -2290,8 +2290,19 @@ input, select, textarea {
     border-radius: 4px;
     border:2px solid #f55c51
 }
+.headerbutton1 {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+    padding: 9px;
+    border-radius: 4px;
+    border:2px solid #f55c51
+}
 
 .headerbutton:hover {
+  background-color: #f55c51; /* Green */
+  color: white;
+}
+.headerbutton1:hover {
   background-color: #f55c51; /* Green */
   color: white;
 }
