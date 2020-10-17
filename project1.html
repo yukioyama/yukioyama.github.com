@@ -21,34 +21,41 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2>Camera Zoom Piece</h2>
+								<h2>My CUAir Work</h2>
                                 <br>
 							</header>
                             <div class="row">
                                 <article class="col-4 col-12-mobile special">
+                                    <a class="image featured"><img src="images/project1f.png" alt="" /></a>
                             </article>
                             <article class="col-4 col-12-mobile special">
 							<a class="image featured"><img src="images/project1c.jpg" alt="" /></a>
                             </article>
                                 <article class="col-4 col-12-mobile special">
+                                    <a class="image featured"><img src="images/project1e.png" alt="" /></a>
                             </article>
                                 </div>
 							<p>
-								<center>Above is an image of the zoom piece design from SOLIDWORKS.  The boxed SONY R10C camera encasing was designed by Christine Yuan, one of my teammates on CUAir's mechanical subteam.  I developed the system consisting of the servo, gears, and mounting pieces.</center>
+								<center>Above are projects I have worked on while on CUAir. To the left is a preliminary drone design to be deployed from the plane fuselage, in the middle is a camera zoom mechanism (which is detailed below), and to the right is my redesign of an unmanned ground vehicle chassis.</center>
 							</p>
 							<section>
 								<header>
 									<h3>Design Objective and Constraints</h3>
 								</header>
-								<p>
-									The goal was to create a system to zoom the camera lens to any desired focal length.  A big constraint was creating a very compact and light design for several reasons.  First, I didn't want to mess with the CG of the plane or gimbal.  Second, it was important that the piece didn't interfere with the movement/rotation of the gimbal used to stabilize the camera.
+								<div class="row">
+                                <article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project1e.jpg" alt="" /></a>
+							</article>
+                                <article class="col-8 col-12-mobile special">
+							        The point of the camera zoom project was to design a mechanism that zooms the onboard camera in the nose cone of the plane (circled in red in the image on the left). Thus, the most important requirement to meet was the space constraint.
+                                    Another requirement was to create a lightweight design to prevent large deviations of the plane's CG. I accomplished both of these by choosing a compact, modular design.
                                   <br> 
                                     <br>
                                     The software team also wanted the system to be closed loop.  Moreover, the system should be able to provide feedback to the controller about the current zoom position.
-                                    <br>
-                                    <br>
-                                    Lastly the electrical team preferred that I used servo motors as opposed to motors.  Servos are useful for a few reasons.  From an electrical standpoint, it isn't necessary to include a ESC (electronic speed controller) or H-Bridge as is required by BLDC's and Brushed DC motors respectively.  From a software standpoint, it is easy to tell a servo to turn to a specific angle because of the built in encoder or potentiometer within all servos.
-								</p>
+                          
+							</article>
+                                    <p>Lastly the electrical team preferred that I used servo motors as opposed to motors.  Servos are useful for a few reasons.  From an electrical standpoint, it isn't necessary to include a ESC (electronic speed controller) or H-Bridge as is required by BLDC's and Brushed DC motors respectively.  From a software standpoint, it is easy to tell a servo to turn to a specific angle because of the built in encoder or potentiometer within all servos.</p>
+                                </div>
                                 <header>
 									<h3>Design Rationale</h3>
 								</header>
@@ -69,7 +76,7 @@
 								 Ultimately, I opted for a design where the gear would act like a clamp that could be tightened with a screw (as seen in the bottom of the picture to the left).  The reason was that it was easy to rapidly prototype this design using a 3D printer (I couldn't 3D print rubber).
                                 <br>
                                 <br>
-                                    Next, I needed to figure out how to provide positional feedback.  While the servos did technically provide angular feedback, I wanted a more foolproof and exact means of feedback.  I was worried that the servos could potentially turn too far and damage the camera lens as a result.  Therefore, I decided to design a physical limit the camera could turn to.
+                                    Next, I needed to figure out how to provide positional feedback. While the servos did technically provide angular feedback, I wanted a more foolproof and exact means of feedback.  I was worried that the servos could potentially turn too far and damage the camera lens as a result. Therefore, I decided to design a physical limit the camera could turn to.
 							</article>
                             
 						</div>
@@ -78,14 +85,14 @@
 								<a class="image featured"><img src="images/project1b.png" alt="" /></a>
 							</article>
                                         <article class="col-8 col-12-mobile special">
-								Initially, I designed two limit switches mounted on the top of the camera encasing box.  Then there would be two sticks mounted on the gear lens that would hit the limit switches if the servo zoomed too far clockwise or counterclockwise.  While this design worked, it wasn't the most elegant, because the sticks would hit the limit switches at an angle.
+								Initially, I designed two limit switches mounted on the top of the camera encasing box. Then there would be two sticks mounted on the gear lens that would hit the limit switches if the servo zoomed too far clockwise or counterclockwise. While this design worked, it wasn't the most elegant, because the sticks would hit the limit switches at an angle.
                                 <br>
                                 <br>
-                                    After a few more design iterations, I came up with the design on the left.  The black piece shown is the stopper piece which prevents the lens gear (the larger one) from over-zooming.  While not shown in the CAD, small push buttons can be inserted into the black stopper piece (the legs of the button fit into the four holes shown).
+                                    After a few more design iterations, I came up with the design on the left. The black piece shown is the stopper piece which prevents the lens gear (the larger one) from over-zooming.  While not shown in the CAD, small push buttons can be inserted into the black stopper piece (the legs of the button fit into the four holes shown).
 							</article>
                             
 						</div>
-                                <p>The push buttons serve as feedback for the servo controller.  They send a digital signal indicating whether the camera has zoomed too far, in which case the controller knows to immediately terminate the servo actuation.  Notice there is a gap between the two (left and right) stoppers.  This gap is to allow the wires to be routed upwards towards the controller board.</p>
+                                <p>The push buttons serve as feedback for the servo controller. They send a digital signal indicating whether the camera has zoomed too far, in which case the controller knows to immediately terminate the servo actuation. Notice there is a gap between the two (left and right) stoppers. This gap is to allow the wires to be routed upwards towards the controller board.</p>
                                     
 							</section>
 							<section>
@@ -93,7 +100,7 @@
 									<h3>Thank You's</h3>
 								</header>
 								<p>
-									Had a lot of help from Theresa Bracht (team lead) and Chrsitine Yuan (gimbal expert) who were in general a great mentors along the way in my first year on CUAir as a college freshman.  Many thanks also to Evan Patrick and Maria Sam on platform software subteam and Joseph Primmer and Adam Weld on the electrical subteam.  Extremely cooperative and helpful when I had to make design decisions which affected their work.
+									Had a lot of help from Theresa Bracht (team lead) and Chrsitine Yuan who were in general a great mentors along the way in my first year on CUAir as a college freshman. Many thanks also to Evan Patrick and Maria Sam on platform software subteam and Joseph Primmer and Adam Weld on the electrical subteam. Extremely cooperative and helpful when I had to make design decisions which affected their work.
 								</p>
 							</section>
 						</article>
