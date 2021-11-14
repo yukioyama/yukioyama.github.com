@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>IoT Road Temperature Monitoring</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+
+			<!-- Main -->
+				<div class="wrapper style1">
+<a href="index.html" class="headerbutton">Back to Home</a>
+					<div class="container">
+						<article id="main" class="special">
+                            
+							<header>
+								<h2>IoT Road Temperature Monitoring</h2>
+                                <br>
+							</header>
+							<div class="row">
+                                <article class="col-4 col-12-mobile special">
+                            </article>
+                            <article class="col-4 col-12-mobile special">
+							<a class="image featured"><img src="images/project12a.png" alt="" /></a>
+                            </article>
+                                <article class="col-4 col-12-mobile special">
+                            </article>
+                                </div>
+							<p>
+								<center>Picture of installed setup</center>
+							</p>
+							<section>
+                                <header>
+									<h3>Problem</h3>
+								</header>
+                                <p>
+                                The Roads Team formed as a part of Cornell University’s MAE 4220/ECE 4950 Internet of Things class to attack the problem of monitoring road weather conditions. This problem is particularly relevant to Tompkins County, which experiences adverse weather conditions despite not having an existing road weather monitoring system. The Road Team’s goal is to address this need with an affordable, minimum viable solution with significant impact.</p>
+                                <p>
+                                    Road weather monitoring is an extremely broad field, and existing systems employed across the United States measure data such as humidity, precipitation depth, pavement temperature, and more. Because this project had to be completed within a single semester, the team chose not to employ an all-encompassing system that collected data for all of such variables. Instead, the team chose to conduct research to determine what data was most crucial to maintaining roads specifically for snowfall and ice. The team ultimately decided to measure subsurface pavement temperature, since this data could be readily used by Tompkins County’s Highway Department to drive anti-icing efforts. The goal of the project is to reduce costs for road weather maintenance by automating and digitalizing the data collection process, which should ultimately lead to increased public road safety, reducing accidents in Tompkins County.
+                                </p>
+                                <p>
+                                This project was extremely consumer-oriented, in that we were in close contact with community partners who would be directly benefiting from the success of our work. The team made sure to address the needs and requirements of Tompkins County officials. Namely, we worked with Jeffrey Smith, the Highway Director at Tompkins County. Mr. Smith not only advised the team, but also directly assisted the team when acquiring highway permits in order to perform construction on the road during the product installation process. The team also worked closely with Professor David Orr, a senior extension associate with Cornell’s Local Roads Program. Professor Orr has decades of experience with road and highway related research, and provided expert insights that helped guide the design of the team’s final product. Professor Orr also spearheaded the hands-on construction effort portion of the project, allowing the team to install a subsurface thermistor at Game Farm Road. The Roads Team is extremely thankful for the help of these two key community partners.
+</p>
+                                <header>
+									<h3>Brainstorming</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project12b.png" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 I was in charge of mechanical design for our product. I began with brainstorming solutions for a waterproof enclosure to contain the Featherboard (used to connect to the LoRaWAN network) and batteries. The device also had to route a wire from the featherboard (inside the enclosure) to the subsurface thermistor (outside the enclosure). I explored two different waterproofing designs. The first design on the left used an o-ring seal, which was less space efficient since the featherboard and battery pack had a rectangular profile, but it would be cheap to purchase an OTF o-ring. The second design on the right featured a rectangular gasket design, which would be more expensive due to the custom gasket purchase, but more space efficient. I chose to explore gasket seals to design for dissassembly: an ultrasonic weld for instance would not fare well when the batteries ran out. I chose to print the enclosure out of ASA polymer, which has similar properties to ABS but is also extremely weather resistant. For the screws and inserts, I opted for a stainless steel material for weather proofing purposes also.
+                                    
+							</article>
+                                </div>
+                            
+                                <header>
+									<h3>System Architecture</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project12c.png" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 I planned to attach the enclosure to a U-channel sign post hammered into the ground, sitting on the shoulder of the road. I wanted it elevated at least half a foot above ground to avoid water submersion during heavy rain. The thermistor wires would exit from a single multicore cable that passed into a hole drilled perpendicularly into the road. This allows the thermistors to collect temperatures under the pavement where cars will actually be driving, as opposed to temperatures at the shoulder of the road. The placement of the enclosure on the shoulder of the road far enough from any vehicle path along with the perpendicular drilled hole ensures both safety and function.
+							</article>
+                                     </div>
+                          
+                                     <header>
+									<h3>Design Iterations and Waterproofing Testing</h3>
+								</header>
+                                  <div class="row">
+                                <article class="col-4 col-12-mobile special">
+                                    <a class="image featured"><img src="images/project12e.png" alt="" /></a>
+                            </article>
+                            <article class="col-4 col-12-mobile special">
+							<a class="image featured"><img src="images/project12f.png" alt="" /></a>
+                            </article>
+                                <article class="col-4 col-12-mobile special">
+                                    <a class="image featured"><img src="images/project12g.png" alt="" /></a>
+                            </article>
+                                </div>
+                                     
+                                
+                                 <header>
+									<h3>O-Ring Waterproofing Design</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project12i.png" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 Ultimately, over several iterations, I gave up on the rectangular gasket design. It wasn't within budget to buy a custom gasket, since we would need to buy in bulk. Instead, I attempted to use a gasket maker, commonly used for waterproofing components in automobiles. It turned out that applying the gasket maker was extremely difficult because it was near impossible to get a constant thickness gasket by squeezing manually. As a result, there were always small gaps that lead to water leaks during submersion tests. Thus, I moved back to the circular o-ring design, at the cost of wasted space.
+                                            <br>
+                                            In order to size the o-ring groove, I carried out the sizing calculations shown in the diagram on the left, and subsequently accounted for standard 3D printing tolerances. My calculations affected the inner/outer radii and depth of the groove.
+                                    
+							</article>
+                                     </div>
+                                 <header>
+									<h3>Final Design</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project12j.png" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								<p>The design to the left shows the my final design for the enclosure. It features a hole for a cable gland that water proofs the outgoing multicore cable connecting to the thermistor probe. It also includes a heatsink with heat insert holes that the battery pack can mount to. Finally, it has a groove and a top cover that the seal the enclosure with an o-ring.</p> 
+                               <p>In hindsight, the heatsink attached to the battery case is useless since the enclosure is printed out of ASA plastic, which has a tiny thermal conductivity coefficient of 0.17 W/m-K. In addition, since there are no vents, there isn't enough convection for the fins to be of any use.
+                               If I had to redo this design, I would include a scheap heat spreader that would spread heat to every surface within the enclosure in an attempt to take the heat load off of the battery pack. Since we didn't have the budget for a die cast part (or the demand for bulk quantity for that matter), it wouldn't have made sense to make an aluminum enclosure for heat dissipation purposes.</p>
+                                            
+                                    
+							</article>
+                                     </div>
+                                <header>
+									<h3>Installation</h3>
+								</header>
+                                 <div class="row">
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/project12h.png" alt="" /></a>
+							</article>
+                                        <article class="col-8 col-12-mobile special">
+								 The installation plan was a huge part of this project, and it was crucial for any sort of success. Moreover, we had to figure out a way to drill perpendicular into the road. Ultimately, our final plan of action entailed forming an access tunnel for the electrical conduit via a combination of dry drilling, mining, and hydraulic mining. We will use an auger styled flex-bit to form the majority of the tunnel from the ditch side to the road boundary. When rock and gravel obstructed the drill bit, we used a steel pipe with a chiseled end to mine through the obstruction in order to continue drilling. A tube water gun was used to loosen the soil and expedite the process.
+
+Although we were not damaging road pavement, a permit and location request was required. We secured a Section 136 form and received a signature from Cornell’s Real Estate Department. The location request was filed and completed. A gas utility line was marked well below the 6” depth of our trench and tunnel. With our community partners we executed a combination of dry drilling and mining to form the tunnel. Because the diameter of our PVC rigid conduit was too large, we resorted to expanding the tunnel’s diameter with our community partners’ sign-post installer. The softness of the soil caused the tunnel to collapse when the shaft was removed so further mining of the PVC and a steel pipe was required.  
+
+							</article>
+                                     </div>
+                        
+                            
+                                
+                            
+						</div>
+							</section>
+							
+						</article>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						
+					
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact & Media</h3>
+										</header>
+										<p>Email: yo76@cornell.edu</p>
+                                        <br>
+										<ul class="icons">
+											<li><a href="https://www.linkedin.com/in/yuki-oyama-01a748177/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
